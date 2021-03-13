@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Add action entry in the Action Menu for CRM Lead -->
+    <record id="crm_case_form_inherit_custom_view_leads" model="ir.ui.view">
+        <field name="name">crm.lead.form.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+        <field name="arch" type="xml">
+            
+             <xpath expr="//field[@name='mobile']" position="replace">
+                <label for="mobile"/>
+                <div class="o_row">
+                    <field name="mobile" widget="phone"/>
+                    <button
+                        type="action"
+                        name="%(sh_whatsapp_integration.sh_whatsapp_integration_send_whatsapp_number_action)d"
+                        class="btn-sm btn-link mb4 fa fa-whatsapp"
+                        aria-label="Whatsapp Number"
+                        title="Whatsapp Number"
+                        attrs="{'invisible':[('mobile', '=', False)]}"
+                        context="{'default_whatsapp_mobile': mobile,'default_crm_lead_id':active_id}"  
+                        groups="sh_whatsapp_integration.group_crm_whatsapp_msg_feature"                        
+                    />
+                    </div>
+                </xpath>
+        </field>
+    </record>
+
+</odoo>
