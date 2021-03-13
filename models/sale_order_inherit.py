@@ -37,7 +37,7 @@ class SaleOrder(models.Model):
             for rec in self:
                 txt_message = ""
                 if rec.company_id.order_information_in_message and rec.partner_id and rec.currency_id and rec.company_id:
-                    txt_message +=  "Estimado " + str(rec.partner_id.name)+","+"%0A%0A"+"Aqui esta el orden "+'*'+rec.name+'*'+" Por un monto de "+'*'+str(rec.amount_total)+'*'+""+str(rec.currency_id.symbol)+" de "+rec.company_id.name+"%0A%0A"    
+                    txt_message +=  "Estimado " + str(rec.partner_id.name)+","+"%0A%0A"+"Aqui esta su orden "+'*'+rec.name+'*'+" Por un monto de "+'*'+str(rec.amount_total)+'*'+""+str(rec.currency_id.symbol)+" de "+rec.company_id.name+"%0A%0A"    
                 if rec.company_id.order_product_detail_in_message:
                     txt_message += "A continuación se muestran los detalles de su pedido."+"%0A"
                     if rec.order_line:
