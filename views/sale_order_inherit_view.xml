@@ -13,11 +13,11 @@
                         type="action"
                         name="%(sh_whatsapp_integration.sh_whatsapp_integration_send_whatsapp_message_action)d"
                         class="oe_highlight"
-                        string="Send By Whatsapp"
+                        string="Enviar por Whatsapp"
                         context="{'default_partner_ids': partner_id,'default_message':text_message,'default_sale_order_id':active_id}" 
                         groups="sh_whatsapp_integration.group_sales_whatsapp_feature"
                     />
-                <button name="send_by_whatsapp_direct" class="oe_highlight" string="Send By Whatsapp Direct" type="object" groups="sh_whatsapp_integration.group_sales_whatsapp_feature"/>
+                <button name="send_by_whatsapp_direct" class="oe_highlight" string="Enviar Directo por Whatsapp" type="object" groups="sh_whatsapp_integration.group_sales_whatsapp_feature"/>
             </button>
             <field name="note" position="after">
             	<field name="text_message" invisible="1"/>

@@ -11,11 +11,11 @@
 	                        type="action"
 	                        name="%(sh_whatsapp_integration.sh_whatsapp_integration_send_whatsapp_message_action)d"
 	                        class="oe_highlight"
-	                        string="Send By Whatsapp"
+	                        string="Enviar por Whatsapp"
 	                        context="{'default_partner_ids': partner_id,'default_message':text_message,'default_stock_picking_id':active_id}"
 	                        groups="sh_whatsapp_integration.group_stock_whatsapp_feature" 
 	                    />
-	                <button name="send_by_whatsapp_direct_to_cust_del" type="object" class="oe_highlight" string="Send By Whatsapp Direct" groups="sh_whatsapp_integration.group_stock_whatsapp_feature"/>
+	                <button name="send_by_whatsapp_direct_to_cust_del" type="object" class="oe_highlight" string="Enviar Directo por Whatsapp" groups="sh_whatsapp_integration.group_stock_whatsapp_feature"/>
             	</button>
             	<xpath expr="//notebook/page[@name='note']/field[@name='note']" position="after">
             		<field name="text_message" invisible="1"/>
